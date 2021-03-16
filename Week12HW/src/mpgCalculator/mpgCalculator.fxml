@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane hgap="14.0" prefHeight="204.0" prefWidth="342.0" 
+          xmlns="http://javafx.com/javafx/8.0.1" 
+          xmlns:fx="http://javafx.com/fxml/1" 
+          fx:controller="mpgCalculator.mpgCalculatorController">
+  <columnConstraints>
+      <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="234.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="183.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="95.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="72.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <TextField fx:id="milesTextField" GridPane.columnIndex="1" />
+      <TextField fx:id="gallonsTextField" prefHeight="25.0" prefWidth="209.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Label text="MPG" GridPane.rowIndex="2" />
+      <Button mnemonicParsing="false" onAction="#calculateButtonPressed" prefHeight="25.0" prefWidth="172.0" text="Calculate" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+      <Label text="Miles driven" />
+      <Label text="Gallons used" GridPane.rowIndex="1" />
+      <TextField fx:id="mpgTextField" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+   </children>
+   <padding>
+      <Insets bottom="14.0" left="14.0" right="14.0" top="14.0" />
+   </padding>
+</GridPane>
